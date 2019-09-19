@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-char count;
+unsigned char count;
 for (count = '0'; count <= '9'; count++)
 putchar (count);
 putchar('\n');
