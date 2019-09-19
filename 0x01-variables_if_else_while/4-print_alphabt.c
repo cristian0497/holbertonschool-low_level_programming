@@ -9,12 +9,13 @@
 int main(void)
 {
 char character;
-for (character = 'a'; character <= 'd'; character++)
-putchar (character);
-for (character = 'f'; character <= 'p'; character++)
-putchar (character);
-for (character = 'r'; character <= 'z'; character++)
-putchar (character);
-putchar ('\n');
+character = 'a';
+while (character <= 'z')
+{
+character == 'e' || character == 'q' ? character++ : character;
+putchar(character);
+character++;
+}
+putchar('\n');
 return (0);
 }
