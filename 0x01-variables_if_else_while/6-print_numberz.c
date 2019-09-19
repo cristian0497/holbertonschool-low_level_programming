@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - the last digit of the number n
  *
@@ -7,11 +7,12 @@
  */
 int main(void)
 {
-int num
-	for (num = 48; num <= 57; num++)
+	int b;
+
+	for (b = 48; b <= 57; b++)
 	{
-		putchar(num);
+		putchar(b);
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
