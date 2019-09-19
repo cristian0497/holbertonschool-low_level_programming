@@ -8,9 +8,12 @@
  */
 int main(void)
 {
-unsigned char count;
-for (count = '0'; count <= '9'; count++)
-putchar (count);
+int character = 48;
+while (character <= 57)
+{
+putchar(character);
+character++;
+}
 putchar('\n');
 return (0);
 }
