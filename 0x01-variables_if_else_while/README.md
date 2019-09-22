@@ -1,0 +1,1 @@
+This folder contain small exercises with C 
