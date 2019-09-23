@@ -1,17 +1,18 @@
 #include <stdio.h>
 /**
  * main - The body of the program
+ *
  * Return: Always is 0 (succes)
  */
 int main(void)
 {
         int a, b, c;
         int x = 49;
-	int y = 49;
+	int y = 50;
 
-        for (a = 48; a < 57; a++)
-        {
-                for (b = x; b <= 57; b++)
+        for (a = 48; a < 56; a++ )
+	{
+                for (b = x; b <= 57; )
 		{
 			for (c = y; c <= 57; c++)
 			{
@@ -24,10 +25,9 @@ int main(void)
 				 putchar (32);
 				 }
 			}
-			y++;
 		}
 		x++;
-        }
+	}
         putchar ('\n');
 	return (0);
 }
