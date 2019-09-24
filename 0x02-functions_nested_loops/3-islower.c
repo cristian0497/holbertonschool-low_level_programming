@@ -2,9 +2,9 @@
 #include <ctype.h>
 
 /**
- * islower - Determine if C is a lowercase
- *
- * return 1 for lowercase and 0 for other.
+ * _islower - Determine if C is a lowercase
+ * @c : check
+ * Return: Always 0 (Succes)
  */
 
 
