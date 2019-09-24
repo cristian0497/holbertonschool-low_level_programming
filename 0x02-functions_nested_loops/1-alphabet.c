@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
+ * print_alphabet - Show the alphabet in lowercase
  *
- *
- *
+ * Return: alphabeth.
  */
 
 void print_alphabet(void)
@@ -14,5 +14,5 @@ void print_alphabet(void)
 	{
 		_putchar(x);
 	}
-	_putchar ('\n');
+	_putchar('\n');
 }
