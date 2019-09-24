@@ -2,9 +2,9 @@
 #include <ctype.h>
 
 /**
- * isalpha - Determine if C is a letter, lowercase or uppercase
- *
- * return 1 for lowercase and 0 for other.
+ * _isalpha - Determine if C is a letter, lowercase or uppercase
+ * @c : letter
+ * Return: 0 (Succes)
  */
 
 
