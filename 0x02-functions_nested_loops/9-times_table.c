@@ -5,7 +5,6 @@
  *
  * Return: 0 (Succes)
  */
-
 void times_table(void)
 {
 	int contver, conthor;
