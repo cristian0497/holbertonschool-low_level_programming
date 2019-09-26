@@ -6,8 +6,8 @@
  */
 void print_times_table(int n)
 {
-        int contver, conthor;
-        int numero, centena, decena, unidad, res;
+	int contver, conthor;
+	int numero, centena, decena, unidad, res;
 
 	if (n > 0 && n < 15)
 	{
@@ -16,11 +16,10 @@ void print_times_table(int n)
 			for (conthor = 0; conthor <= n; conthor++)
 			{
 				numero = (contver * conthor);
-			        centena = numero / 100;
+				centena = numero / 100;
 				res = numero % 100;
 				decena = res / 10;
 				unidad = res % 10;
-
 				if (conthor != 0)
 				{
 					if (centena == 0)
@@ -31,8 +30,7 @@ void print_times_table(int n)
 					{
 						_putchar (centena + '0');
 					}
-
-				        if ((decena == 0) && (centena != 1))
+					if ((decena == 0) && (centena != 1))
 					{
 						_putchar (32);
 					}
@@ -41,9 +39,7 @@ void print_times_table(int n)
 					_putchar (decena + '0');
 					}
 				}
-
 					_putchar (unidad + '0');
-
 				if (conthor < n)
 				{
 					_putchar (',');
@@ -57,7 +53,7 @@ void print_times_table(int n)
 			_putchar ('\n');
 		}
 	}
-	else
+	else if (n <= 0 || n >= 15)
 	{
 		_putchar('\n');
 	}
