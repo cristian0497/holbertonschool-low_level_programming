@@ -3,7 +3,7 @@
 /**
  * _isupper - show if the letter is Upper or Lower
  *
- * Return: Always 0 if lower, always 1 if Upper
+ * Return: Always 0.
  */
 
 int _isupper(int c)
