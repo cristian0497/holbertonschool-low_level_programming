@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
+ * main - print numbers fizz Buzz
  *
- *
- *
+ * Return: 1 Succes.
  */
 
 int main(void)
@@ -18,23 +18,22 @@ int main(void)
 
 		if (mul3 != 0 && mul5 != 0)
 		{
-			printf ("%d ", cont);
+			printf("%d ", cont);
 		}
 		else if (mul3 == 0 && mul5 != 0)
 		{
-			printf ("Fizz " );
+			printf("Fizz ");
 		}
 		else if (mul3 != 0 && mul5 == 0)
 		{
-			printf ("Buzz ");
+			printf("Buzz ");
 		}
 		else if (mul3 == 0 && mul5 == 0)
 		{
-			printf ("FizzBuzz ");
+			printf("FizzBuzz ");
 		}
 		cont++;
 	}
-	putchar('\n');
-
-return(1);
+	putchar ('\n');
+	return (1);
 }
