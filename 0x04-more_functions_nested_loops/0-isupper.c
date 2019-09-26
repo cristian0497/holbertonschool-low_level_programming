@@ -2,7 +2,7 @@
 
 /**
  * _isupper - show if the letter is Upper or Lower
- *
+ * @c : var
  * Return: Always 0.
  */
 
