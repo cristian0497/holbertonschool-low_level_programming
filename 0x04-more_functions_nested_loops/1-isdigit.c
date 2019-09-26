@@ -2,7 +2,7 @@
 
 /**
  * _isdigit - show if c is digit or not
- *
+ * @c : var
  * Return: Always 0 if lower, always 1 if Upper
  */
 
