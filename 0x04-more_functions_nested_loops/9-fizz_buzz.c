@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include<stdio.h>
+
 /**
  * main - print numbers fizz Buzz
  *
@@ -18,15 +19,15 @@ int main(void)
 		{
 			printf("Fizz");
 		}
-		if (cont % 5 == 0 && cont % 3 != 0)
+		else if (cont % 5 == 0 && cont % 3 != 0)
 		{
 			printf("Buzz");
 		}
-		if (cont % 3 == 0 && cont % 5 == 0)
+		else if (cont % 3 == 0 && cont % 5 == 0)
 		{
 			printf("FizzBuzz");
 		}
-		if (cont % 3 != 0 && cont % 5 != 0)
+		else
 		{
 			printf("%d", cont);
 		}
