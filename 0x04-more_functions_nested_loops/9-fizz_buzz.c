@@ -9,29 +9,28 @@
 int main(void)
 {
 
-	int cont = 1, mul3, mul5;
+	int cont = 1;
 
 	while (cont <= 100)
 	{
-		mul3 = cont % 3;
-		mul5 = cont % 5;
 
-		if (mul3 != 0 && mul5 != 0)
+		if (cont % 3 == 0 && cont % 5 != 0)
 		{
-			printf("%d ", cont);
+			printf("Fizz");
 		}
-		if (mul3 == 0 && mul5 != 0)
+		if (cont % 5 == 0 && cont % 3 != 0)
 		{
-			printf("Fizz ");
+			printf("Buzz");
 		}
-		if (mul3 != 0 && mul5 == 0)
+		if (cont % 3 == 0 && cont % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("FizzBuzz");
 		}
-		if (mul3 == 0 && mul5 == 0)
+		if (cont % 3 != 0 && cont % 5 != 0)
 		{
-			printf("FizzBuzz ");
+			printf("%d", cont);
 		}
+		printf(" ");
 		cont++;
 	}
 	putchar('\n');
