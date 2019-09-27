@@ -20,20 +20,20 @@ int main(void)
 		{
 			printf("%d ", cont);
 		}
-		else if (mul3 == 0 && mul5 != 0)
+		if (mul3 == 0 && mul5 != 0)
 		{
 			printf("Fizz ");
 		}
-		else if (mul3 != 0 && mul5 == 0)
+		if (mul3 != 0 && mul5 == 0)
 		{
 			printf("Buzz ");
 		}
-		else if (mul3 == 0 && mul5 == 0)
+		if (mul3 == 0 && mul5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
 		cont++;
 	}
-	printf("\n");
-	return (1);
+	putchar('\n');
+	return (0);
 }
