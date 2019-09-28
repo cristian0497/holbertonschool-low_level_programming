@@ -31,7 +31,10 @@ int main(void)
 		{
 			printf("%d", cont);
 		}
+		if (cont != 100)
+		{
 		printf(" ");
+		}
 		cont++;
 	}
 	putchar('\n');
