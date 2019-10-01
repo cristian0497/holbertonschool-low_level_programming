@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * puts_half - no return
+ * @str: var
+ * Return: 0
  */
 
 void puts_half(char *str)
@@ -21,12 +21,12 @@ void puts_half(char *str)
 			_putchar(str[n]);
 		}
 	}
-        if (cont % 2 == 1)
-        {
-                for (n = (cont - 1) / 2; n <= cont; n++)
-                {
-                        _putchar(str[n]);
-                }
-        }
+	if (cont % 2 == 1)
+	{
+		for (n = (cont - 1) / 2; n <= cont; n++)
+		{
+			_putchar(str[n]);
+		}
+	}
 	_putchar('\n');
 }
