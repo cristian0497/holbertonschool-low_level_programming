@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * print_rev - string rev
+ * @s: string
+ * Return: Succes
  */
 
 void print_rev(char *s)
