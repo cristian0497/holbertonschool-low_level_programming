@@ -14,8 +14,6 @@ void puts_half(char *str)
 	{
 		cont++;
 	}
-	_putchar(cont + '0');
-	_putchar('\n');
 
 	if (cont % 2 == 0)
 	{
@@ -26,9 +24,9 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (n = (cont - 1) / 2; n < cont - 1; n++)
+		for (n = (cont - 1) / 2; n < cont; n++)
 		{
-			_putchar(str[n]);
+			_putchar(str[n + 1]);
 		}
 	}
 	_putchar('\n');
