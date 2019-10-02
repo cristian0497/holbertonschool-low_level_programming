@@ -23,5 +23,5 @@ void print_array(int *a, int n)
 			}
 			cont++;
 	}
-	_putchar('\n');
+	printf("\n");
 }
