@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * puts_half - no return
@@ -17,16 +18,17 @@ void puts_half(char *str)
 	}
 	if (cont % 2 == 0)
 	{
-		for (n = cont / 2; n <= cont; n++)
+		for (n = cont / 2; n < cont; n++)
 		{
 			_putchar(str[n]);
 		}
 	}
-	if (cont % 2 != 0)
+	if (cont % 2 == 1)
 	{
-		for (n = (cont - 1) / 2; n <= cont; n++)
+		n = ((cont - 1) / 2);
+		for ( ; n < cont; n++)
 		{
-			_putchar(str[n]);
+			_putchar(str[n + 1]);
 		}
 	}
 	_putchar('\n');
