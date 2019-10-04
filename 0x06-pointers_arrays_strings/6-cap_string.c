@@ -10,6 +10,10 @@ char *cap_string(char *s)
 {
 	int i;
 
+	if (s[0] > 96 && s[0] < 123)
+	{
+		s[0] -= 32;
+	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		switch (s[i])
