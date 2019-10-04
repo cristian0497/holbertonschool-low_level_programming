@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
- *
+ * reverse_array - invert array
+ * @a : Var
+ * @n : cant
+ * Return: 1
  */
 
 void reverse_array(int *a, int n)
