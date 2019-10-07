@@ -9,8 +9,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
-	int x;
+	int i, x;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -18,15 +17,16 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[x])
 			{
-				s = (s + i);
+				s = (s + i + 0);
 				goto salir;
 			}
 			if (s[i] == '\0')
 			{
 				s = "NULL";
-				goto salir;
+				goto salirnull;
 			}
 		}
 	}
 salir: return (s);
+salirnull: return (s);
 }
