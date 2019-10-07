@@ -17,12 +17,11 @@ char *_strchr(char *s, char c)
 			s = (s + i);
 			break;
 		}
-		else if (s[i] == '\0')
-		{
-			s = "NULL";
-			break;
-		}
 		i++;
+	}
+	if (s[i] == '\0')
+	{
+		s = 0;
 	}
 	return (s);
 }
