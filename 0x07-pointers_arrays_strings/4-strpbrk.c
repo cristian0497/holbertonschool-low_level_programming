@@ -24,7 +24,7 @@ char *_strpbrk(char *s, char *accept)
 			if (s[i] == '\0')
 			{
 				s = "NULL";
-				break;
+				goto salir;
 			}
 		}
 	}
