@@ -15,18 +15,17 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (x = 0; accept[x] != '\0'; x++)
 		{
-			if (s[i] == accept[x])
+			if (s[i] == accept[x] && s[i] != '\0')
 			{
-				s = (s + i + 0);
+				s = (s + i);
 				goto salir;
-			}
-			if (s[i] == '\0')
-			{
-				s = "NULL";
-				goto salirnull;
 			}
 		}
 	}
+	if (s[i] == '\0')
+	{
+		s = 0;
+		goto salir;
+	}
 salir: return (s);
-salirnull: return (s);
 }
