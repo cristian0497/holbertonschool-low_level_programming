@@ -28,7 +28,7 @@ int _funtion_check(int num, int y)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 4)
+	if (n < 4 && n > 1)
 	{
 		return (-1);
 	}
