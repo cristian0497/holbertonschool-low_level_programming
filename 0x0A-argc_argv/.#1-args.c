@@ -1,1 +1,0 @@
-cristian@cristianLinux.3013:1570976777
