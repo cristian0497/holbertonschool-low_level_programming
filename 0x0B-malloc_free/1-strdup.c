@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * *_strdup - main copy the string
@@ -9,11 +10,13 @@
 char *_strdup(char *str)
 {
 	char *text;
-	int i, j;
+	int i = 0, j;
 
-	for (i = 0; str[i] != '\0'; i++)
-		if (str[0] == '\0')
-			return (0);
+	while (str[i] != '\0')
+		i++;
+	i++;
+	if (str == 0)
+		return (0);
 
 	text = malloc(sizeof(char) * i);
 	for (j = 0; j < i; j++)
