@@ -3,18 +3,20 @@
 #include <stdio.h>
 
 /**
- * _strlen - funtion string leng.
- * @str: string.
- * Return: len.
+ * _strlen - Count char
+ * @s: funtion
+ * Return: 0 Succes
  */
 
-int _strlen(char *str)
+int _strlen(char *s)
 {
-	int x;
+	int contchar = 0;
 
-	for (x = 0; str[x] == '\0'; x++)
-		;
-	return (x);
+	while (s[contchar] != 0)
+	{
+		contchar++;
+	}
+	return (contchar);
 }
 
 /**
