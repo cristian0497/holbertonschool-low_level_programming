@@ -17,7 +17,6 @@ char *_strdup(char *str)
 	text = malloc(sizeof(char) * i);
 	if (text == NULL)
 	{
-		printf("text nulo");
 		return (NULL);
 	}
 	for (j = 0; j < i; j++)
