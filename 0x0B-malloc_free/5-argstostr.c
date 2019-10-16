@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * _strlen - funtion string leng
- * @str: string
- * Return: len
+ * _strlen - funtion string leng.
+ * @str: string.
+ * Return: len.
  */
 
 int _strlen(char *str)
@@ -18,10 +18,10 @@ int _strlen(char *str)
 }
 
 /**
- * *argstostr - funtion concatenate arg
- * @ac: size of arguments
- * @av: arguments
- * Return: arguments concatenated
+ * argstostr - funtion concatenate arg.
+ * @ac: size of arguments.
+ * @av: arguments.
+ * Return: arguments concatenated.
  */
 
 char *argstostr(int ac, char **av)
@@ -34,9 +34,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	sum = 0;
 	for (x = 0; x < ac; x++)
-		{
-			sum += _strlen(av[x]);
-		}
+	{
+		sum += _strlen(av[x]);
+	}
 	string = malloc((sum + ac + 1) * sizeof(char));
 	if (string == NULL)
 	{
