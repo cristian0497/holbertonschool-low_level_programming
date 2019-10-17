@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	string = malloc(sizeof(int) * nmemb);
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nmemb; i++)
 	{
 		string[i] = '0';
 	}
