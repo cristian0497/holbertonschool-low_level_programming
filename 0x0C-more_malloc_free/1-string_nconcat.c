@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strlen - lenght of s
  * @s: string
@@ -31,13 +32,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	lens1 = _strlen(s1);
 	sum_t = (lens1 + lens2);
 	if (s1 == NULL)
-		s2 = ("");
+		s1 = "";
 	if (s2 == NULL)
 		s2 = ("");
 	if (n < lens2)
-		string = malloc(sizeof(char) * (lens1 + n));
+	{
+		string = malloc(sizeof(char) * (lens1 + n) + 1);
+		if (string == NULL)
+			return (NULL);
+	}
 	else if (n >= lens2)
-		string = malloc(sizeof(char) * sum_t);
+	{
+		string = malloc(sizeof(char) * sum_t + 1);
+		if (string == NULL)
+			return (NULL);
+	}
 	for (cont = 0; cont < lens1; cont++)
 	{
 		string[cont] = s1[cont];
