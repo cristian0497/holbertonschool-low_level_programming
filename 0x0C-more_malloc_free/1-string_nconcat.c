@@ -48,24 +48,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return (NULL);
 	}
 	for (cont = 0; cont < lens1; cont++)
-	{
 		string[cont] = s1[cont];
-	}
 	if (n < lens2)
 	{
 		(void)sum_t;
 		for (y = 0, cont = lens1; y < n; y++, cont++)
-		{
 			string[cont] = s2[y];
-		}
 	}
 	if (n >= lens2)
 	{
 		(void)n;
 		for (y = 0, cont = lens1; y < lens2 ; y++, cont++)
-		{
 			string[cont] = s2[y];
-		}
 	}
 	string[cont] = '\0';
 	return (string);
