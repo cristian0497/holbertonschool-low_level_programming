@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * _calloc - funtion alocate malloc
- * @nmeb: size
+ * @nmemb: size
  * @size: size of pointer
  * Return: string
  */
@@ -12,7 +12,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *string;
 	unsigned int i;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
 
 	string = malloc(nmemb + size);
