@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * _calloc - funtion alocate malloc
@@ -17,6 +18,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	string = malloc(size * nmemb);
 	if (string == NULL)
+		return (NULL);
+	if (nmemb >= UINT_MAX / size)
+		return (NULL);
+	else if (size >= UINT_MAX / nmemb)
 		return (NULL);
 	for (i = 0; i < nmemb; i++)
 		string[i] = 0;
