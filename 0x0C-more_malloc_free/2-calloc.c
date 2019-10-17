@@ -1,12 +1,13 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
+
 /**
  * _calloc - funtion alocate malloc
  * @nmeb: size
  * @size: size of pointer
  * Return: string
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *string;
@@ -14,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	string = malloc(sizeof(int) * nmemb);
+	string = malloc(size * nmemb);
 	if (string == NULL)
 		return (NULL);
 	for (i = 0; i < nmemb; i++)
