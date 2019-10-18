@@ -26,41 +26,41 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *string;
-	unsigned int lens2, lens1, sum_t, cont, y;
+	unsigned int lens2, lens1, x, y;
+	unsigned int z;
 
 	lens2 = _strlen(s2);
 	lens1 = _strlen(s1);
-	sum_t = (lens1 + lens2);
+	/* printf("lens1: %d lens2: %d\n", z, lens2); */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s2 = ("");
-	if (n < lens2)
-	{
-		string = malloc(sizeof(char) * (lens1 + n) + 1);
-		if (string == NULL)
-			return (NULL);
-	}
-	else if (n >= lens2)
-	{
-		string = malloc(sizeof(char) * sum_t + 1);
-		if (string == NULL)
-			return (NULL);
-	}
-	for (cont = 0; cont < lens1; cont++)
-		string[cont] = s1[cont];
-	if (n < lens2)
-	{
-		(void)sum_t;
-		for (y = 0, cont = lens1; y < n; y++, cont++)
-			string[cont] = s2[y];
-	}
+		s2 = "";
 	if (n >= lens2)
 	{
-		(void)n;
-		for (y = 0, cont = lens1; y < lens2 ; y++, cont++)
-			string[cont] = s2[y];
+		z = lens1 + lens2;
+		n = lens2;
+		string = malloc(sizeof(char) * z + 1);
+		if (string == NULL)
+			return (NULL);
+		for (x = 0; x < lens1; x++)
+			string[x] = s1[x];
+		for (y = 0; x < z; y++, x++)
+			string[x] = s2[y];
+		string[x] = '\0';
 	}
-	string[cont] = '\0';
+	else if (n < lens2)
+	{
+		z = lens1 + n;
+		string = malloc(sizeof(char) * z + 1);
+		if (string == NULL)
+			return (NULL);
+		for (x = 0; x < lens1; x++)
+			string[x] = s1[x];
+		for (y = 0; x < z; y++, x++)
+			string[x] = s2[y];
+		string[x] = '\0';
+
+		}
 	return (string);
 }
