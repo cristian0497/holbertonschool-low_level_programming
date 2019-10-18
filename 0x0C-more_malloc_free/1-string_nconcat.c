@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * _strlen - lenght of s
  * @s: string
@@ -31,7 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	lens2 = _strlen(s2);
 	lens1 = _strlen(s1);
-	/* printf("lens1: %d lens2: %d\n", z, lens2); */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
