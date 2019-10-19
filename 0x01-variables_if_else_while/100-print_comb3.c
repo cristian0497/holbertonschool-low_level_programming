@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-	int a, b;
-	int c = 49;
+	int a = 48, b = 48, c = 48;
 
-	for (a = 48; a < 57; a++)
+	while (a < 57)
 	{
-		for (b = c; b <= 57; b++)
+		b = c + 1;
+		while (b < 58)
 		{
 			putchar (a);
 			putchar (b);
@@ -19,8 +19,10 @@ int main(void)
 				putchar (',');
 				putchar (32);
 			}
+			b++;
 		}
-	c++;
+		c++;
+		a++;
 	}
 	putchar ('\n');
 return (0);
