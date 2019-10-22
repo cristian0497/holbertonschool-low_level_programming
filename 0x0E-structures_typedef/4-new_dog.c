@@ -1,5 +1,22 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * _strlen - Count char
+ * @s: funtion
+ * Return: 0 Succes
+ */
+int _strlen(char *s)
+{
+	int contchar = 0;
+
+	while (s[contchar] != 0)
+	{
+		contchar++;
+	}
+	return (contchar);
+}
 
 /**
  * *_strcpy - funtion copu
@@ -29,25 +46,27 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *n_name, *n_owner;
+	int x, y;
 
 	dog_t  *ret;
 
 	ret = malloc(sizeof(struct dog));
-	if (!ret)
-		return (NULL);
-	n_name = malloc(*name);
-	if (n_name == NULL)
+	if (ret == NULL)
 		return (NULL);
 
+	x = _strlen(name);
+	n_name = malloc(x);
+	if (n_name == NULL)
+		return (NULL);
 	_strcpy(n_name, name);
-	ret->name = n_name;
+	ret->name = name;
 
 	ret->age = age;
 
-	n_owner = malloc(*owner);
+	y = _strlen(owner);
+	n_owner = malloc(y);
 	if (n_owner == NULL)
 		return (NULL);
-
 	_strcpy(n_owner, owner);
 	ret->owner = owner;
 
