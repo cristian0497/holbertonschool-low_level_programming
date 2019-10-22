@@ -11,7 +11,7 @@ int _strlen(char *s)
 {
 	int contchar = 0;
 
-	while (s[contchar] != 0)
+	while (s[contchar] != '\0')
 	{
 		contchar++;
 	}
@@ -46,13 +46,11 @@ char *_strcpy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
 	int x, y;
-
 	dog_t  *ret;
 
 	ret = malloc(sizeof(struct dog));
-	if (ret == NULL)
+	if (ret == NULL || name == NULL || owner == NULL)
 	{
 		free(ret);
 		return (NULL);
@@ -62,22 +60,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ret->name == NULL)
 	{
 		free(ret->name);
+		free(ret);
 		return (NULL);
 	}
-	_strcpy(ret->name, name);
-
-	ret->age = age;
-	if (ret->age <= 0)
-		return (0);
-
 	y = _strlen(owner);
 	ret->owner = malloc(sizeof(char) * (y + 1));
 	if (ret->owner == NULL)
 	{
 		free(ret->owner);
+		free(ret->name);
+		free(ret);
 		return (NULL);
 	}
+	_strcpy(ret->name, name);
+	ret->age = age;
 	_strcpy(ret->owner, owner);
-
 	return (ret);
 }
