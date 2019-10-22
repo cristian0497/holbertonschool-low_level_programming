@@ -43,6 +43,7 @@ char *_strcpy(char *dest, char *src)
  * @owner: owner
  * Return: ret
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *n_name, *n_owner;
@@ -53,19 +54,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ret = malloc(sizeof(struct dog));
 	if (ret == NULL)
 		return (NULL);
-	if (name == NULL || owner == NULL)
-		return (NULL);
-	if (age == 0)
-		return (0);
 
-	x = _strlen(name + 1);
+	x = _strlen(name);
+	if (x == 0)
+		return (NULL);
 	n_name = malloc(x);
 	_strcpy(n_name, name);
 	ret->name = name;
 
 	ret->age = age;
 
-	y = _strlen(owner + 1);
+	y = _strlen(owner);
+	if (y == 0)
+		return (NULL);
 	n_owner = malloc(y);
 	_strcpy(n_owner, owner);
 	ret->owner = owner;
