@@ -2,15 +2,18 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ * main - funtion main
+ * @ac: int cont
+ * @av: arguments
+ * Return: 0
  */
 
-int main (int ac, char **av)
+int main(int ac, char **av)
 {
-	int arg = atoi(av[1]);
+	int arg;
 	int cont;
+
+	arg = atoi(av[1]);
 	if (arg < 0)
 	{
 		printf("Error\n");
