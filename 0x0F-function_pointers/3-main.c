@@ -11,7 +11,7 @@ int main(int ac, char **av)
 {
 	int num1, num2;
 
-	if (ac > 4)
+	if (ac == 4)
 	{
 		printf("Error\n");
 		return (98);
