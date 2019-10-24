@@ -7,7 +7,7 @@
  * @s: operator passed argument program
  * Return: pointer to the respectly function
  */
-int (*get_op_func(char *s))(int, int)
+int(*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -22,11 +22,10 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (ops[i].op != NULL)
 	{
-		if (strcmp(ops[i].op, s))
-			i += 1;
-
-		return (ops[i].f);
+		if (!strcmp(ops[i].op, s))
+			return (ops[i].f);
+		i += 1;
 	}
 	printf("Error\n");
-	exit (99);
+	exit(99);
 }

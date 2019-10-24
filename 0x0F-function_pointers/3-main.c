@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (98);
 	}
-
+	else
 	num1 = atoi(av[1]);
 	num2 = atoi(av[3]);
 	printf("%d\n", (*get_op_func(av[2]))(num1, num2));
