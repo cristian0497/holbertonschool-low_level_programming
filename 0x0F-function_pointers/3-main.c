@@ -1,7 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * main - funtion main
  * @ac: cont arguments
@@ -14,7 +13,7 @@ int main(int ac, char **av)
 
 	if (ac > 4)
 	{
-		printf("Error 98\n");
+		printf("Error\n");
 		return (98);
 	}
 
