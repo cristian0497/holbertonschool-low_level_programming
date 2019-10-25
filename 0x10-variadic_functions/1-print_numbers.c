@@ -13,11 +13,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_list mylist;
 	unsigned int cont;
+
 	if (separator)
 	{
 	va_start(mylist, n);
 
-	for(cont = 0; cont < n; cont++)
+	for (cont = 0; cont < n; cont++)
 	{
 		printf("%d", va_arg(mylist, int));
 		if (cont < n - 1)
