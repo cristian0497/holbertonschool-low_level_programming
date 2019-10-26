@@ -14,36 +14,42 @@ void print_all(const char * const format, ...)
 	f = format;
 	cont = 0;
 	va_start(myformat, format);
-	while (f[cont] != '\0')
+	if (format)
 	{
-		x = 0;
-		switch (f[cont])
+		while (f[cont] != '\0')
 		{
-		case 'c':
-			printf("%c", va_arg(myformat, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(myformat, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(myformat, double));
-			break;
-		case 's':
-			s = va_arg(myformat, char *);
-			if (s == NULL)
+			x = 0;
+			switch (f[cont])
 			{
-				printf("(nil)");
+			case 'c':
+				printf("%c", va_arg(myformat, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(myformat, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(myformat, double));
+				break;
+			case 's':
+				s = va_arg(myformat, char *);
+				if (s == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", s);
+				break;
+			default:
+				x = 1;
+			}
+			while (!(x) && f[cont + 1] != '\0')
+			{
+				printf(", ");
 				break;
 			}
-			printf("%s", s);
-			break;
-		default:
-			x = 1;
+			cont++;
 		}
-		if (!(x) && f[cont + 1] != '\0')
-			printf(", ");
-		cont++;
+		printf("\n");
+		va_end(myformat);
 	}
-	printf("\n");
-	va_end(myformat);
 }
