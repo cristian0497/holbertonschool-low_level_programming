@@ -22,10 +22,10 @@ void print_all(const char * const format, ...)
 			printf("%c", va_arg(myformat, int));
 			break;
 		case 'i':
-			printf("%d", va_arg(myformat, int));
+			printf("%i", va_arg(myformat, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(myformat, double));
+			printf("%.2f", va_arg(myformat, double));
 			break;
 		case 's':
 			s = va_arg(myformat, char *);
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 		default:
 			x = 1;
 		}
-		if (!(x) && f[cont + 1] != '\0')
+		if (x != 1 && f[cont + 1] != '\0')
 			printf(", ");
 		cont++;
 		x = 0;
