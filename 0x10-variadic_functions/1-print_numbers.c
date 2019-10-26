@@ -24,8 +24,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (cont < n - 1)
 			printf("%s", separator);
 	}
+	printf("\n");
 	va_end(mylist);
-	if (cont == n)
-		printf("\n");
-	}
 }
