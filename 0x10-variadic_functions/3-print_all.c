@@ -36,7 +36,8 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-			default: x = 1;
+			default:
+				x = 1;
 			}
 			if (!(x) && f[cont + 1] != '\0')
 				printf(", ");
