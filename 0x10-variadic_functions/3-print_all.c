@@ -12,11 +12,8 @@ void print_all(const char * const format, ...)
 	const char *f, *s;
 
 	f = format;
-	cont = 0;
 	va_start(myformat, format);
-	if (format)
-	{
-		while (f[cont] != '\0')
+		while (format != NULL && f[cont] != '\0')
 		{
 			x = 0;
 			switch (f[cont])
@@ -39,17 +36,12 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-			default:
-				x = 1;
+			default: x = 1;
 			}
-			while (!(x) && f[cont + 1] != '\0')
-			{
+			if (!(x) && f[cont + 1] != '\0')
 				printf(", ");
-				break;
-			}
 			cont++;
 		}
 		printf("\n");
 		va_end(myformat);
-	}
 }
