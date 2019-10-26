@@ -16,16 +16,17 @@ void print_all(const char * const format, ...)
 	va_start(myformat, format);
 	while (f[cont] != '\0')
 	{
+		x = 0;
 		switch (f[cont])
 		{
 		case 'c':
 			printf("%c", va_arg(myformat, int));
 			break;
 		case 'i':
-			printf("%i", va_arg(myformat, int));
+			printf("%d", va_arg(myformat, int));
 			break;
 		case 'f':
-			printf("%.2f", va_arg(myformat, double));
+			printf("%f", va_arg(myformat, double));
 			break;
 		case 's':
 			s = va_arg(myformat, char *);
@@ -39,10 +40,9 @@ void print_all(const char * const format, ...)
 		default:
 			x = 1;
 		}
-		if (x != 1 && f[cont + 1] != '\0')
+		if (!(x) && f[cont + 1] != '\0')
 			printf(", ");
 		cont++;
-		x = 0;
 	}
 	printf("\n");
 	va_end(myformat);
