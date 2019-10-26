@@ -8,7 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list myformat;
-	int cont;
+	int cont, x;
 	const char *f, *s;
 
 	f = format;
@@ -29,15 +29,20 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			s = va_arg(myformat, char *);
-			if (s != NULL)
+			if (s == NULL)
 			{
-				printf("%s", s);
+				printf("(nil)");
 				break;
 			}
-			printf("(nil)");
+			printf("%s", s);
 			break;
+		default:
+			x = 1;
 		}
+		if (!(x) && f[cont + 1] != '\0')
+			printf(", ");
 		cont++;
+		x = 0;
 	}
 	printf("\n");
 	va_end(myformat);
