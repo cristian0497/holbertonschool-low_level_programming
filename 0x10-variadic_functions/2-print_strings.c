@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_string - funtion print string
+ * print_strings - funtion print string
  * @separator: Pointer to separator string
  * @n: cant of string to print
  */
