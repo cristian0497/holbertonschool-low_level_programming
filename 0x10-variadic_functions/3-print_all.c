@@ -40,4 +40,5 @@ void print_all(const char * const format, ...)
 		cont++;
 	}
 	printf("\n");
+	va_end(myformat);
 }
