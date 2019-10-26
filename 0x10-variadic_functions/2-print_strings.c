@@ -20,6 +20,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (cont < n - 1 && separator != NULL)
 			printf("%s", separator);
 	}
-	printf("\n");
 	va_end(mylist);
+	printf("\n");
 }
