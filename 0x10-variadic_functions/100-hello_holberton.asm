@@ -4,10 +4,10 @@
 
 	section .text
 
-	global _start
-	_start:
+	global main
+	main:
 	mov rax, 1
 	mov rdi, 1
 	mov rsi, message
-	mov rdx, 14
+	mov rdx, 17
 	syscall
