@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * print_list - funtion print linked list
@@ -9,9 +8,10 @@
 
 size_t print_list(const list_t *h)
 {
-	int cont = 0;
+	int cont;
 
-	while (h != NULL)
+	cont = 0;
+	while (h)
 	{
 		if (!h->str)
 		{
