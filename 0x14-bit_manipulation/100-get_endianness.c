@@ -9,7 +9,7 @@ int get_endianness(void)
 	unsigned int i;
 	char *val;
 
-	val= (char *)&i;
+	val = (char *) &i;
 	i = 1;
 	if (*val)
 		return (1);
