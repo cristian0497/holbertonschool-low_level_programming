@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * get_bit - funtion that obtain nth bit
@@ -10,8 +11,12 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int cont;
 	unsigned long int tmp = n;
-	
-	if (n)
+
+	if (index > (sizeof(unsigned long int) * 8))
+		return (-1);
+	if (n == 0)
+		return (0);
+	if (n > 0)
 	{
 		cont = 0;
 		while ((tmp >>= 1) > 0)
