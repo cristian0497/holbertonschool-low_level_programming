@@ -3,7 +3,7 @@
  * flip_bits - funtion check the bits to change
  * @n: num 1
  * @m: num 2
- * Return: unsugned int 
+ * Return: unsugned int
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
