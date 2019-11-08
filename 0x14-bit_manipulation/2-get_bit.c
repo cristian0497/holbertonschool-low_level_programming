@@ -10,7 +10,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int cont;
 	unsigned long int tmp = n;
-	if (n && index)
+	
+	if (n)
 	{
 		cont = 0;
 		while ((tmp >>= 1) > 0)
