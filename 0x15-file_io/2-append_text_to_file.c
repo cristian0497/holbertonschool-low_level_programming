@@ -30,6 +30,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	ret_val = open(filename, O_RDWR | O_APPEND);
 	if (ret_val == -1)
 		return (-1);
+	if (!text_content)
+		return (close(ret_val) == -1 ? -1 : 1)
 	len = _strlen(text_content);
 	w = write(ret_val, text_content, len);
 	if (w == -1)
