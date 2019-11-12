@@ -24,7 +24,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	ret_val = open(filename, O_CREAT | O_WRONLY, 0600);
+	if (text_content == NULL)
+		text_content = '\0';
+	ret_val = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (ret_val == -1)
 		return (-1); /* Verificar retorno error */
 	len = _strlen(text_content);
