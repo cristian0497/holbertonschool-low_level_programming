@@ -28,14 +28,11 @@ int create_file(const char *filename, char *text_content)
 		text_content = '\0';
 	ret_val = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (ret_val == -1)
-		return (-1); /* Verificar retorno error */
+		return (-1);
 	len = _strlen(text_content);
 	ret_val = write(ret_val, text_content, len);
-	if (ret_val != len)
-	{
-		close(ret_val);
+	if (ret_val == -1)
 		return (-1);
-	}
 	return (close(ret_val) == -1 ? -1 : 1);
 
 }
