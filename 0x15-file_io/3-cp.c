@@ -13,15 +13,13 @@
  */
 int main(int ac, char **av)
 {
-	int  ret_val, rd, wr, close_to, close_from;
-	int ret_val2;
-	char *buf[1024], *file_from, *file_to;
+	int  ret_val, rd, wr, close_to, close_from, ret_val2;
+	char buf[1024], *file_from, *file_to;
 
-	file_from = av[1];
-	file_to = av[2];
+	file_from = av[1], file_to = av[2];
 	if (ac != 3)
-		dprintf(2, "usage cp file_from file_to\n"), exit(97);
-	ret_val = open(file_from, O_RDONLY); /* apertura archivo from */
+		dprintf(STDERR_FILENO, "usage cp file_from file_to\n"), exit(97);
+	ret_val = open(file_from, O_RDONLY);
 	if (ret_val == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
