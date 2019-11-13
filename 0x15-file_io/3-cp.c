@@ -28,17 +28,18 @@ int main(int ac, char **av)
 {
 	int  ret_val, rd, wr;
 	int ret_val2, len;
-	char *buf;
+	char *buf, *file_from;
 
+	file_from = av[1];
 	if (ac != 3)
 	{
 		dprintf(2, "usage cp file_from file_to\n");
 		exit(97);
 	}
-	ret_val = open(av[1], O_RDONLY); /* apertura archivo from */
+	ret_val = open(file_from, O_RDONLY); /* apertura archivo from */
 	if (ret_val == -1)
 	{
-		dprintf(ret_val, "Error: Can't read from file %s\n", av[1]);
+		dprintf(1, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	buf = malloc(sizeof(char) * 1024); /* pendiente if buf == NULL */
