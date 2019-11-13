@@ -14,7 +14,7 @@
 int main(int ac, char **av)
 {
 	int  ret_val, rd, wr, close_to, close_from, ret_val2;
-	char buf[1024], *file_from, *file_to;
+	char *buf[1024], *file_from, *file_to;
 
 	file_from = av[1], file_to = av[2];
 	if (ac != 3)
