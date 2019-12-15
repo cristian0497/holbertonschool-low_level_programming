@@ -31,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			len++;
 		}
 		tmp = (*h);
-		if (idx > len)
+		if (idx >= len)
 		{
 			free(node);
 			return (NULL);
