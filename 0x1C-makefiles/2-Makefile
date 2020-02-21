@@ -1,7 +1,7 @@
 # MakeFile with (SRC: .c= .o)
-CC = gcc
-SRC = main.c holberton.c
-OBJ = $(SRC: .c=.o)
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(patsubst %.c,%.o,$(SRC))
 NAME = holberton
 
 all: $(OBJ)
