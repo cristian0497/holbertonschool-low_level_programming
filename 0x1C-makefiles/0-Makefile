@@ -1,0 +1,4 @@
+# My first MakeFile to compile a file with gcc
+
+all: holberton.c main.c
+	gcc holberton.c main.c -o holberton
