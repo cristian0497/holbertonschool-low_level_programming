@@ -1,0 +1,20 @@
+# A complete MakeFile
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(patsubst .c, .o, $(SRC))
+NAME=holberton
+RM=
+CFLAGS=-Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean:  clean oclean
+
+re: oclean all
