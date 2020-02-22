@@ -8,10 +8,10 @@ RM=rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean: $(NAME)
+clean:
 	$(RM) *~ $(NAME)
-oclean: $(NAME)
+oclean:
 	$(RM) $(OBJ)
-fclean: $(NAME)
+fclean:
 	$(RM) *~ $(NAME) $(OBJ)
-re: fclean all
+re: oclean all
