@@ -1,0 +1,17 @@
+# Add More Rules
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(patsubst %.c,%.o,$(SRC))
+NAME=holberton
+RM=rm -f
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean: $(NAME)
+	$(RM) *~ $(NAME)
+oclean: $(NAME)
+	$(RM) *.o
+fclean: $(NAME)
+	$(RM) *~ $(NAME) *.o
+re: fclean all
