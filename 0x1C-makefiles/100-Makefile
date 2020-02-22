@@ -7,7 +7,9 @@ RM=
 CFLAGS=-Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
+ifneq ("$(wildcard *.h)","")
 	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
+endif
 
 clean:
 	$(RM) *~ $(NAME)
@@ -17,4 +19,4 @@ oclean:
 
 fclean:  clean oclean
 
-re: oclean all
+re: fclean all
