@@ -15,7 +15,7 @@ clean:
 	$(RM) *~ $(NAME)
 
 oclean:
-ifneq ("$(wildcard $(OBJ)", "")
+ifneq ("$(wildcard $(OBJ))", "")
 	$(RM) $(OBJ)
 endif
 
