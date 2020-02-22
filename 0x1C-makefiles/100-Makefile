@@ -13,8 +13,6 @@ endif
 clean:
 	$(RM) *~ $(NAME)
 oclean:
-ifneq ("$(wildcard $(OBJ))", "")
 	$(RM) $(OBJ)
-endif
 fclean:  clean oclean
 re: oclean all
