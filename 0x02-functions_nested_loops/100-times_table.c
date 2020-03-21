@@ -8,8 +8,9 @@ void print_times_table(int n)
 {
 	int contver, conthor;
 	int numero, centena, decena, unidad, res;
-
-	if (n >= 0 && n < 15)
+	if (n < 0 || n > 15)
+		return;
+	if (n > 0 && n < 15)
 	{
 		for (contver = 0; contver <= n; contver++)
 		{
@@ -43,6 +44,4 @@ void print_times_table(int n)
 	}
 	else if (n <= 0 || n >= 15)
 		_putchar('\n');
-	else
-		return;
 }
