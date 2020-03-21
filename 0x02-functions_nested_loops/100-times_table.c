@@ -9,7 +9,7 @@ void print_times_table(int n)
 	int contver, conthor;
 	int numero, centena, decena, unidad, res;
 
-	if (n < 0 || n > 15)
+	if (n <= 0 || n > 15)
 		return;
 	if (n > 0 && n < 15)
 	{
